@@ -1,11 +1,11 @@
 #!/bin/sh
 
 MODULE=aria2
-VERSION=2.3
+VERSION=2.4
 TITLE=Aria2
 DESCRIPTION=超酷的远程下载工具
 HOME_URL=Module_aria2.asp
-CHANGELOG="支持routeID输入"
+CHANGELOG="支持2.30"
 
 # Check and include base
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
