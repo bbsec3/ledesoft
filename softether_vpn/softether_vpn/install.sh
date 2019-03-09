@@ -6,6 +6,7 @@ eval `dbus export softether`
 fwlocal=`cat /etc/openwrt_release|grep DISTRIB_RELEASE|cut -d "'" -f 2|cut -d "V" -f 2`
 checkversion=`versioncmp $fwlocal 2.30`
 
+mkdir -p $KSROOT/softether
 mkdir -p $KSROOT/init.d
 mkdir -p /tmp/upload
 
@@ -28,7 +29,7 @@ cd /tmp
 if [ "$checkversion" == "1" ]; then
 	cp -rf /tmp/softether_vpn/softether/1-hamcore.se2 $KSROOT/softether/hamcore.se2
 	cp -rf /tmp/softether_vpn/softether/1-vpnserver $KSROOT/softether/vpnserver
-then
+else
 	cp -rf /tmp/softether_vpn/softether/hamcore.se2 $KSROOT/softether/
 	cp -rf /tmp/softether_vpn/softether/vpnserver $KSROOT/softether/
 fi
