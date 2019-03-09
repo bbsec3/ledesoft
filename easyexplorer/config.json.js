@@ -1,0 +1,9 @@
+{
+"version":"1.0",
+"md5":"3321ba4e5e33822310cb1f77d2b43fc1",
+"home_url":"Module_easyexplorer.asp",
+"title":"EasyExplorer",
+"description":"强大易用的全平台同步工具",
+"changelog":"修复开机启动脚本",
+"build_date":"2019-03-09_16:35:31"
+}
