@@ -1,11 +1,11 @@
 #!/bin/sh
 
 MODULE="hotfix"
-VERSION="0.2.4"
+VERSION="0.2.5"
 TITLE="HOTFIX"
 DESCRIPTION="快速修复当前固件中的BUG"
 HOME_URL="Module_hotfix.asp"
-CHANGELOG="修复2.26默认主题汉化问题"
+CHANGELOG="修复2.30 OPKG问题"
 
 # Check and include base
 DIR="$( cd "$( dirname "$BASH_SOURCE[0]" )" && pwd )"
