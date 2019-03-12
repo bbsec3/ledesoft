@@ -186,7 +186,7 @@ $('#cos-fields').forms([
 { title: 'SecretId', name: 'cos_secretid', type: 'text', maxlen: 50, size: 50, value: dbus.cos_secretid },
 { title: 'SecretKey', name: 'cos_secretkey', type: 'text', maxlen: 38, size: 38, value: dbus.cos_secretkey },
 { title: 'APPID', name: 'cos_appid', type: 'text', maxlen: 38, size: 38, value: dbus.cos_appid },
-{ title: 'Bucket名称', name: 'cos_bucket', type: 'text', maxlen: 38, size: 38, value: dbus.cos_bucket },
+{ title: 'Bucket名称', name: 'cos_bucket', type: 'text', maxlen: 38, size: 38, value: dbus.cos_bucket, suffix: ' 输入 - 前面的字符' },
 { title: '所属地域', name: 'cos_local', type: 'select', options: option_local, value: dbus.cos_local },
 { title: '● 本地设置' },
 { title: '本地同步目录', name:'cos_file', type: 'text', maxlen: 50, size: 50, value: dbus.cos_file || "/tmp/cosdir" },
@@ -214,6 +214,7 @@ $('#cos-fields').forms([
 			<li>超过一周的自动备份文件会在最近一次备份时删除，如果备份的次数小于7次则保留。</li>
 			<li>固件所有配置备份包前缀[lede]仅软件中心备份前缀[softcenter]。</li>
 			<li>点击恢复备份后建议重启一次。</li>
+			<li>将固件降级到2.30以下或者从低版本升级到2.30或以上需要重新安装。</li>
 	</div>
 </div>
 <button type="button" value="Save" id="save-button" onclick="save()" class="btn btn-primary">保存 <i class="icon-check"></i></button>

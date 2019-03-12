@@ -575,15 +575,15 @@
             "version": "0.1"
         }, 
         {
-            "build_date": "2017-10-12_15:16:43", 
-            "changelog": "", 
+            "build_date": "2019-03-12_12:08:38", 
+            "changelog": "支持2.30", 
             "description": "软件中心自动云备份和恢复", 
             "home_url": "Module_cos.asp", 
-            "md5": "1af7f760d2a33089f2c543213ec8af8b", 
+            "md5": "32116fb4f27c21b369229d7df3afbeca", 
             "name": "cos", 
             "tar_url": "cos/cos.tar.gz", 
             "title": "腾讯云存储", 
-            "version": "0.4"
+            "version": "0.5"
         }, 
         {
             "build_date": "2017-10-12_15:18:30", 

@@ -2,11 +2,17 @@
 
 export KSROOT=/koolshare
 source $KSROOT/scripts/base.sh
+fwlocal=`cat /etc/openwrt_release|grep DISTRIB_RELEASE|cut -d "'" -f 2|cut -d "V" -f 2`
+checkversion=`versioncmp $fwlocal 2.30`
 eval `dbus export cos_`
 
 mkdir -p $KSROOT/init.d
-cd /tmp
-cp -rf /tmp/cos/bin/* $KSROOT/bin/
+
+if [ "$checkversion" == "1" ]; then
+	cp -rf /tmp/cos/bin/cos1 $KSROOT/bin/cos
+else
+	cp -rf /tmp/cos/bin/cos $KSROOT/bin/cos
+fi
 cp -rf /tmp/cos/scripts/* $KSROOT/scripts/
 cp -rf /tmp/cos/init.d/* $KSROOT/init.d/
 cp -rf /tmp/cos/webs/* $KSROOT/webs/
