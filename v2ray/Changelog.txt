@@ -1,6 +1,12 @@
 Koolshare OpenWRT/LEDE V2ray plugin Changelog
 ===========================================
 2.3.4
+   - add	增加一些服务端口开关；
+   - remove	删除内置smartdns功能；
+   - update	更新默认名单更新到最新；
+   - update	更新v2ray二进制到最新：V4.18.0；
+
+2.3.4
    - add	增加流量探测开关；
    - add	增加不支持的固件提示；
    - update	更新v2ray二进制到最新：V4.13.0；
