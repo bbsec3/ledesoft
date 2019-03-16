@@ -1,6 +1,9 @@
 Koolshare OpenWRT/LEDE V2ray plugin Changelog
 ===========================================
-2.3.4
+2.3.6
+   - add	增加socks5、http代理无验证配置；
+
+2.3.5
    - add	增加一些服务端口开关；
    - remove	删除内置smartdns功能；
    - update	更新默认名单更新到最新；

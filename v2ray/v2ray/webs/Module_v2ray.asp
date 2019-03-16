@@ -17,6 +17,7 @@
 		var x = 4;
 		var status_time = 1;
 		var option_mode = [['VMess', 'VMess']];
+		var option_auth = [['1', '无验证'], ['2', '使用用户名密码验证']];
 		var option_ss_method = [['aes-128-cfb', 'aes-128-cfb'], ['aes-256-cfb', 'aes-256-cfb'], ['chacha20', 'chacha20'], ['chacha20-ietf', 'chacha20-ietf'], ['chacha20-poly1305', 'chacha20-poly1305'], ['chacha20-ietf-poly1305', 'chacha20-ietf-poly1305'], ['aes-128-gcm', 'aes-128-gcm'], ['aes-256-gcm', 'aes-256-gcm']];
 		var option_acl_mode = [['0', '不代理'], ['1', 'gfwlist黑名单'], ['2', '大陆白名单'], ['3', '游戏模式'], ['4', '全局模式']];
 		var option_acl_mode_name = ['不代理', 'gfwlist黑名单', '大陆白名单', '游戏模式', '全局模式'];
@@ -649,9 +650,11 @@
 			var f1  = E('_v2ray_basic_socks').checked;
 			var f2  = E('_v2ray_basic_http').checked;
 			var f3  = E('_v2ray_basic_ss').checked;
-			elem.display(PR('_v2ray_service_username'), f1||f2);
+			var f4  = E('_v2ray_service_auth').value == '2';
+			elem.display(PR('_v2ray_service_auth'), f1||f2);
 			elem.display(PR('_v2ray_service_sspasswd'), f3);
-
+			elem.display(PR('_v2ray_service_passwd'), f4);
+			
 			//rule
 			var l1  = E('_v2ray_basic_rule_update').value == '1';
 			elem.display('_v2ray_basic_rule_update_day', l1);
@@ -767,7 +770,7 @@
 			E("_v2ray_basic_status_foreign").innerHTML = "国外链接 - 提交中...暂停获取状态！";
 			E("_v2ray_basic_status_china").innerHTML = "国内链接 - 提交中...暂停获取状态！";
 			var paras_chk = ["enable", "sbmode", "sniffing", "socks", "http", "ss", "forward", "dns_chromecast", "gfwlist_update", "chnroute_update", "cdn_update", "cron" ];
-			var paras_inp = ["v2ray_acl_default_mode", "v2ray_dns_plan", "v2ray_dns_china", "v2ray_dns_china_user", "v2ray_dns_foreign_select", "v2ray_dns_foreign", "v2ray_dns_foreign_user", "v2ray_basic_rule_update", "v2ray_basic_rule_update_day", "v2ray_basic_rule_update_hr", "v2ray_basic_watchdog", "v2ray_basic_watchdog_time", "v2ray_basic_watchdog_mod", "v2ray_basic_cron_enablehour", "v2ray_basic_cron_enableminute", "v2ray_basic_cron_disablehour", "v2ray_basic_cron_disableminute", "v2ray_basic_check_releases", "v2ray_basic_server", "v2ray_basic_type", "v2ray_service_username", "v2ray_service_passwd", "v2ray_service_ssmethod", "v2ray_service_sspasswd" ];
+			var paras_inp = ["v2ray_acl_default_mode", "v2ray_dns_plan", "v2ray_dns_china", "v2ray_dns_china_user", "v2ray_dns_foreign_select", "v2ray_dns_foreign", "v2ray_dns_foreign_user", "v2ray_basic_rule_update", "v2ray_basic_rule_update_day", "v2ray_basic_rule_update_hr", "v2ray_basic_watchdog", "v2ray_basic_watchdog_time", "v2ray_basic_watchdog_mod", "v2ray_basic_cron_enablehour", "v2ray_basic_cron_enableminute", "v2ray_basic_cron_disablehour", "v2ray_basic_cron_disableminute", "v2ray_basic_check_releases", "v2ray_basic_server", "v2ray_basic_type", "v2ray_service_auth", "v2ray_service_username", "v2ray_service_passwd", "v2ray_service_ssmethod", "v2ray_service_sspasswd" ];
 			// collect data from checkbox
 			for (var i = 0; i < paras_chk.length; i++) {
 				dbus["v2ray_basic_" + paras_chk[i]] = E('_v2ray_basic_' + paras_chk[i] ).checked ? '1':'0';
@@ -1127,7 +1130,7 @@
 			<script type="text/javascript">
 				$('#v2ray_basic_pannel').forms([
 					{ title: '代理模式', name:'v2ray_acl_default_mode',type:'select', options:option_acl_mode, value:dbus.v2ray_acl_default_mode },
-					{ title: 'V2ray服务器类型', name:'v2ray_basic_type',type:'select',options:[['1', '自建'], ['2', '订阅']], value: dbus.v2ray_basic_type || "1"},
+					{ title: 'V2ray服务器类型', name:'v2ray_basic_type',type:'select',options:[['1', '自建'], ['2', '订阅']], value: dbus.v2ray_basic_type || '1'},
 					{ title: 'V2ray服务器选择', name:'v2ray_basic_server',type:'select',options:option_server_list},
 					{ title: 'V2ray进阶设置', multi: [
 						{ name:'v2ray_basic_sbmode',type:'checkbox',value: dbus.v2ray_basic_sbmode == 1,suffix: '&nbsp;&nbsp;启用配置文件routing项'},
@@ -1139,11 +1142,12 @@
 						{ name:'v2ray_basic_ss',type:'checkbox',value: dbus.v2ray_basic_ss == 1,suffix: '&nbsp;&nbsp;开启ss代理（端口1283）'},
 						{ name:'v2ray_basic_forward',type:'checkbox',value: dbus.v2ray_basic_forward == 1,suffix: '&nbsp;&nbsp;允许远程连接'}
 					], help: '开启一些服务端口给其它客户端本地或远程连接'},	
-					{ title: 'V2ray服务验证', multi: [
-						{ suffix: '&nbsp;&nbsp;用户名'},
-						{ name:'v2ray_service_username',type:'text',value: dbus.v2ray_service_username || 'koolshare' ,suffix: '&nbsp;&nbsp;密码'},
+					{ title: 'V2ray服务验证方式', name:'v2ray_service_auth',type:'select', options:option_auth ,value: dbus.v2ray_service_auth || '1', help: '配置是否启用验证'},	
+					{ title: 'V2ray服务验证信息', multi: [
+						{ suffix: '&nbsp;&nbsp;用户名&nbsp;'},
+						{ name:'v2ray_service_username',type:'text',value: dbus.v2ray_service_username || 'koolshare' ,suffix: '&nbsp;&nbsp;密码&nbsp;'},
 						{ name:'v2ray_service_passwd',type:'password',value: dbus.v2ray_service_passwd || 'koolshare', peekaboo: 1}
-					], help: '开启一些服务端口给其它客户端本地或远程连接'},	
+					], help: '设置用户名密码'},	
 					{ title: 'V2ray SS服务配置', multi: [
 						{ suffix: '&nbsp;&nbsp;加密方式'},
 						{ name:'v2ray_service_ssmethod',type:'select', options:option_ss_method,value: dbus.v2ray_service_ssmethod || 'chacha20',suffix: '&nbsp;&nbsp;密码'},

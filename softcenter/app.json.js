@@ -487,15 +487,15 @@
             "version": "1.1"
         }, 
         {
-            "build_date": "2019-03-16_23:14:22", 
-            "changelog": "增加一些服务端口", 
+            "build_date": "2019-03-17_00:47:47", 
+            "changelog": "增加无需验证配置", 
             "description": "模块化的代理软件包", 
             "home_url": "Module_v2ray.asp", 
-            "md5": "a772976af4b766dc1a27ca357f747595", 
+            "md5": "cc11f169dc179f7b2c41d106880d8108", 
             "name": "v2ray", 
             "tar_url": "v2ray/v2ray.tar.gz", 
             "title": "V2Ray", 
-            "version": "2.3.5"
+            "version": "2.3.6"
         }, 
         {
             "build_date": "2019-02-25_21:35:18", 
