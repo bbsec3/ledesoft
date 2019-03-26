@@ -294,6 +294,9 @@ No part of this file may be used without permission.
 		function issues_KP(){
 			window.open("https://uyzeda.fanqier.cn/f/v5mhk3");
 		}
+		function Ad_Contribution(){
+			window.open("https://xo.tn");
+		}		
 		function verifyFields(){
 			var a = E('_koolproxy_enable').checked;
 //			var f = (E('_koolproxy_reboot').value == '1');
@@ -610,8 +613,9 @@ No part of this file may be used without permission.
 //						{ name: 'koolproxy_reboot_hour', type: 'select', options: option_reboot_hour, value: dbus.koolproxy_reboot_hour || "", suffix: '<lable id="koolproxy_reboot_hour_suf">重启</lable>', prefix: '<span id="koolproxy_reboot_hour_pre" class="help-block"><lable>每天</lable></span>' },
 //						{ name: 'koolproxy_reboot_inter_hour', type: 'select', options: option_reboot_inter, value: dbus.koolproxy_reboot_inter_hour || "", suffix: '<lable id="koolproxy_reboot_inter_hour_suf">重启</lable>', prefix: '<span id="koolproxy_reboot_inter_hour_pre" class="help-block"><lable>每隔</lable></span>' }
 //					] },
-					{ title: '证书下载', suffix: ' <button id="_download_cert" onclick="download_cert();" class="btn btn-danger">证书下载 <i class="icon-download"></i></button>&nbsp;&nbsp;<button onclick="https_KP();" class="btn btn-success">HTTPS过滤教程</button>' },
-					{ title: 'KoolProxy交流', suffix: ' <button id="_join_QQ" onclick="join_QQ();" class="btn">加入QQ群</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="join_KP();" class="btn">访问官网</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="issues_KP();" class="btn btn-danger">广告反馈</button>' }
+					{ title: '证书下载', suffix: ' <button id="_download_cert" onclick="download_cert();" class="btn btn-danger">证书下载 <i class="icon-download"></i></button>&nbsp;&nbsp;<button onclick="https_KP();" class="btn btn-success">HTTPS过滤教程 <i class="icon-hammer"></i></button>' },
+					{ title: 'KoolProxy交流', suffix: ' <button id="_join_QQ" onclick="join_QQ();" class="btn">加入QQ群 <i class="icon-plus"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="join_KP();" class="btn">访问官网 <i class="icon-globe"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="issues_KP();" class="btn btn-danger">广告反馈 <i class="icon-tools"></i></button>' },
+					{ title: '广告赞助', suffix: ' <button onclick="Ad_Contribution();" class="btn btn-primary">养我啊 <i class="icon-check"></i></button>' }
 				]);
 			</script>
 		</div>
