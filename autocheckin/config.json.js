@@ -1,9 +1,9 @@
 {
-"version":"0.3.1",
-"md5":"c39321c0e2ef7d3faa523d586b2efeba",
+"version":"1.0",
+"md5":"63b25840ebf9c54f6dcb473341d387d8",
 "home_url":"Module_autocheckin.asp",
 "title":"签到狗2.0",
 "description":"每日批量自动签到",
-"changelog":"修复BUG和增加签到站点",
-"build_date":"2018-09-23_18:26:03"
+"changelog":"修复BUG",
+"build_date":"2019-03-26_12:59:30"
 }
