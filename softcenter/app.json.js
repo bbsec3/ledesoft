@@ -658,15 +658,15 @@
             "version": "0.1"
         }, 
         {
-            "build_date": "2019-03-26_09:57:33", 
-            "changelog": "修正界面样式", 
+            "build_date": "2019-03-26_11:18:10", 
+            "changelog": "修正页面", 
             "description": "听说KP和软路由更搭哦~", 
             "home_url": "Module_koolproxy.asp", 
-            "md5": "fc481973ba81021e5697e32d8721b9ef", 
+            "md5": "78e4db6f0f6145265fef704379734d28", 
             "name": "koolproxy", 
             "tar_url": "koolproxy/koolproxy.tar.gz", 
             "title": "koolproxy", 
-            "version": "3.8.5.2"
+            "version": "3.8.5.3"
         }
     ], 
     "home_url": "https://raw.githubusercontent.com/koolshare/koolshare.github.io/master", 
