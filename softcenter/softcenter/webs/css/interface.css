@@ -842,6 +842,15 @@ a.close:hover {
 .btn.btn-success:focus, .btn.btn-success:hover {
 	background:#6cc92e
 }
+
+.btn.btn-hello {
+	color:#fff!important;
+	background:#0099FF
+}
+.btn.btn-hello:focus, .btn.btn-hello:hover {
+	background:#51aded
+}
+
 .btn.btn-link {
 	color:#919293!important;
 	box-shadow:none;
