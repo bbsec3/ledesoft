@@ -55,15 +55,15 @@
             "version": "1.1.5"
         }, 
         {
-            "build_date": "2019-03-27_21:49:34", 
-            "changelog": "修复严重BUG", 
+            "build_date": "2019-03-28_12:47:23", 
+            "changelog": "修复读取cookie错误", 
             "description": "每日批量自动签到", 
             "home_url": "Module_autocheckin.asp", 
-            "md5": "151887d04bb2e0c2a59efd0bcf0206ce", 
+            "md5": "b412b6742fd02e0d9f50ba84a7d1d036", 
             "name": "autocheckin", 
             "tar_url": "autocheckin/autocheckin.tar.gz", 
             "title": "签到狗2.0", 
-            "version": "1.1"
+            "version": "1.2"
         }, 
         {
             "build_date": "2017-10-09_22:23:58", 
@@ -658,15 +658,15 @@
             "version": "0.1"
         }, 
         {
-            "build_date": "2019-03-26_11:18:10", 
-            "changelog": "修正页面", 
+            "build_date": "2019-03-28_01:25:40", 
+            "changelog": "页面微调", 
             "description": "听说KP和软路由更搭哦~", 
             "home_url": "Module_koolproxy.asp", 
-            "md5": "78e4db6f0f6145265fef704379734d28", 
+            "md5": "103f932d2f37c1d03f6cce7f766d6197", 
             "name": "koolproxy", 
             "tar_url": "koolproxy/koolproxy.tar.gz", 
             "title": "koolproxy", 
-            "version": "3.8.5.3"
+            "version": "3.8.5.4"
         }
     ], 
     "home_url": "https://raw.githubusercontent.com/koolshare/koolshare.github.io/master", 
