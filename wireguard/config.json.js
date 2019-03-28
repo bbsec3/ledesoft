@@ -1,9 +1,9 @@
 {
-"version":"0.3",
-"md5":"e67ecc7a04b3573806d5b7116ab6928a",
+"version":"0.4",
+"md5":"509fda9127ebcc1fbd4aa110d8e67c19",
 "home_url":"Module_wireguard.asp",
 "title":"WireGuard",
 "description":"高效的次世代VPN",
-"changelog":"增加模式",
-"build_date":"2019-03-09_16:33:16"
+"changelog":"删除smartdns",
+"build_date":"2019-03-28_22:37:07"
 }
