@@ -66,15 +66,15 @@
             "version": "0.5"
         }, 
         {
-            "build_date": "2019-03-09_16:32:11", 
-            "changelog": "修复udp2waw开关失效", 
+            "build_date": "2019-04-02_21:15:11", 
+            "changelog": "修复mac控制", 
             "description": "外服游戏解决方案", 
             "home_url": "Module_sgame.asp", 
-            "md5": "f304d7de0b492e1c120893aed62b46a8", 
+            "md5": "ab7432a96012d6eec7b297a45e780150", 
             "name": "sgame", 
             "tar_url": "sgame/sgame.tar.gz", 
             "title": "游戏加速器", 
-            "version": "0.8.7"
+            "version": "0.8.8"
         }, 
         {
             "build_date": "2019-03-01_01:21:54", 
