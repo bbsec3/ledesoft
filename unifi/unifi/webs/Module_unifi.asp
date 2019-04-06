@@ -66,7 +66,8 @@ No part of this file may be used without permission.
 						return false;
 					}
 					document.getElementById("_unifi_status").innerHTML = response.result.split("@@")[0];
-					verifyFields();
+					setTimeout("get_run_status();", 3000);
+					verifyFields();					
 				},
 				error: function(){
 					if(softcenter == 1){
