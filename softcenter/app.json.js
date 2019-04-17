@@ -476,15 +476,15 @@
             "version": "0.7"
         }, 
         {
-            "build_date": "2019-03-12_12:12:25", 
+            "build_date": "2019-04-17_18:45:41", 
             "changelog": "升级bin", 
             "description": "强大易用的全平台同步工具", 
             "home_url": "Module_easyexplorer.asp", 
-            "md5": "02230fbac4cea8871915e07fbcfe0109", 
+            "md5": "596d4d036d424db4ae11f3f0d24fd093", 
             "name": "easyexplorer", 
             "tar_url": "easyexplorer/easyexplorer.tar.gz", 
             "title": "EasyExplorer", 
-            "version": "1.1"
+            "version": "1.2"
         }, 
         {
             "build_date": "2019-03-17_00:47:47", 

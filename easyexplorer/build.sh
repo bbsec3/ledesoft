@@ -1,7 +1,7 @@
 #!/bin/sh
 
 MODULE="easyexplorer"
-VERSION="1.1"
+VERSION="1.2"
 TITLE="EasyExplorer"
 DESCRIPTION="强大易用的全平台同步工具"
 HOME_URL="Module_easyexplorer.asp"
