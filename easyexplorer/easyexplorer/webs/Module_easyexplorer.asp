@@ -1,4 +1,4 @@
-<title>软件中心 - easyexplorer</title>
+<title>软件中心 - 易有云（easyexplorer）</title>
 <content>
 <style type="text/css">
 input[disabled]:hover{
@@ -124,12 +124,12 @@ function download_binary(){
 }
 </script>
 <div class="box">
-<div class="heading">EasyExplorer <a href="#/soft-center.asp" class="btn" style="float:right;border-radius:3px;margin-right:5px;margin-top:0px;">返回</a></div>
+<div class="heading">易有云（easyexplorer） <a href="#/soft-center.asp" class="btn" style="float:right;border-radius:3px;margin-right:5px;margin-top:0px;">返回</a></div>
 <div class="content">
 	<span class="col" style="line-height:30px;width:700px">
-	EasyExplorer是koolshare小宝开发的，支持跨设备、点对点文件传输同步工具。<br />
-	你需要先到<a id="gfw_number" href="https://www.ddnsto.com" target="_blank">https://www.ddnsto.com </a>扫码登录获取token(令牌)，然后在本插件内配置Token和本地同步文件夹。<br />
-	<font color="#FF3300">注意：</font>因验证方式改变，原有Token和设置失效，最新插件需要您重新登录控制台获取Token并重新设置。
+	易有云（easyexplorer）是koolshare小宝开发的，支持跨设备、点对点文件传输同步工具。<br />
+	EasyExplorer支持PC、Mac、iOS、安卓、NAS和路由器平台，iOS易有云公测中：<a href="http://koolshare.cn/thread-159997-1-1.html" target="_blank">http://koolshare.cn/thread-159997-1-1.html</a><br />
+	你需要先到<a href="https://www.ddnsto.com" target="_blank">https://www.ddnsto.com </a>扫码登录获取token(令牌)，然后在本插件内配置Token和本地同步文件夹。
 </div>
 </div>
 
@@ -152,13 +152,12 @@ $('#easyexplorer-fields').forms([
 </div>
 </div>
 <div class="box">
-	<div class="heading">EasyExplorer穿透设置教程： <a class="pull-right" data-toggle="tooltip" title="Hide/Show Notes" href="javascript:toggleVisibility('notes');"><span id="sesdivnotesshowhide"><i class="icon-chevron-up"></i></span></a></div>
+	<div class="heading">易有云（easyexplorer）穿透设置教程： <a class="pull-right" data-toggle="tooltip" title="Hide/Show Notes" href="javascript:toggleVisibility('notes');"><span id="sesdivnotesshowhide"><i class="icon-chevron-up"></i></span></a></div>
 	<div class="section content" id="sesdivnotes" style="display:none">
 			<li> 查看设置教程<a id="gfw_number" href="http://koolshare.cn/thread-129199-1-1.html" target="_blank"><font color="#FF3300">http://koolshare.cn/thread-129199-1-1.html</font></a></li>
 			<li> DLNA解码组件较大，如果你不使用DLNA服务则无需开启。</li>
 			<li> 首次启用DLNA解码支持会需要较长时间来下载视频解码组件。</li>
 			<li> 更新固件后需要重新下载视频解码组件。</li>
-			<li> IOS和Android APP目前还在开发中。</li>
 	</div>
 </div>
 <button type="button" value="Save" id="save-button" onclick="save()" class="btn btn-primary">保存 <i class="icon-check"></i></button>
