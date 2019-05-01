@@ -16,11 +16,11 @@ pid=`pidof koolproxy`
 #abx_nu_local=`grep -E -v "^!" $KSROOT/koolproxy/data/rules/chengfeng.txt | wc -l`
 #fanboy_rules_local=`cat $KSROOT/koolproxy/data/rules/fanboy.txt  | sed -n '4p'|awk '{print $3,$4}'`
 #fanboy_nu_local=`grep -E -v "^!" $KSROOT/koolproxy/data/rules/fanboy.txt | wc -l`
-video_rules_local=`cat $KSROOT/koolproxy/data/rules/koolproxy.txt  | sed -n '4p'|awk '{print $3,$4}'`
+encryption_rules_local=`cat $KSROOT/koolproxy/data/rules/koolproxy.txt  | sed -n '4p'|awk '{print $3,$4}'`
 
 if [ "$status" -ge "1" ]; then
-	if [ "$koolproxy_video_rules" == "1" ]; then
-		[ "$koolproxy_video_rules" == "1" ] && http_response "视频规则：$video_rules_local"
+	if [ "$koolproxy_encryption_rules" == "1" ]; then
+		[ "$koolproxy_encryption_rules" == "1" ] && http_response "加密规则：$encryption_rules_local"
 	else
 		http_response "<font color='#FF0000'>未加载！</font>"
 	fi

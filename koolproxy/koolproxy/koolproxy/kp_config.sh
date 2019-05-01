@@ -19,30 +19,18 @@ write_user_txt(){
 load_rules(){
 	sed -i '1,7s/1/0/g' $SOURCE_LIST
 
-	if [ "$koolproxy_video_rules" == "1" -a "koolproxy_oline_rules" == "0" -a "$koolproxy_easylist_rules" == "0" -a "$koolproxy_abx_rules" == "0" -a "$koolproxy_fanboy_rules" == "0" ]; then
-		echo_date 加载【视频规则】
+	if [ "$koolproxy_encryption_rules" == "1" -a "koolproxy_oline_rules" == "0" -a "$koolproxy_easylist_rules" == "0" -a "$koolproxy_abx_rules" == "0" -a "$koolproxy_fanboy_rules" == "0" ]; then
+		echo_date 加载【加密规则】
 		sed -i '3,4s/0/1/g' $SOURCE_LIST
 	else
 		if [ "$koolproxy_oline_rules" == "1" ]; then
 			echo_date 加载【绿坝规则】
 			sed -i '1,2s/0/1/g;4s/0/1/g' $SOURCE_LIST
 		fi
-		if [ "$koolproxy_video_rules" == "1" ]; then
-			echo_date 加载【视频规则】
+		if [ "$koolproxy_encryption_rules" == "1" ]; then
+			echo_date 加载【加密规则】
 			sed -i '3,4s/0/1/g' $SOURCE_LIST
-		fi		
-		if [ "$koolproxy_easylist_rules" == "1" ]; then
-			echo_date 加载【ABP规则】
-			sed -i '5s/0/1/g' $SOURCE_LIST		
 		fi
-		if [ "$koolproxy_abx_rules" == "1" ]; then
-			echo_date 加载【乘风规则】
-			sed -i '6s/0/1/g' $SOURCE_LIST		
-		fi
-		if [ "$koolproxy_fanboy_rules" == "1" ]; then
-			echo_date 加载【Fanboy规则】
-			sed -i '7s/0/1/g' $SOURCE_LIST		
-		fi				
 	fi
 }
 
@@ -62,12 +50,12 @@ start_koolproxy(){
 		[ "$koolproxy_mode" == "3" ] && echo_date 选择【黑名单模式】
 		[ "$koolproxy_mode" == "4" ] && echo_date 选择【带HTTPS的黑名单模式】
 #		[ "$koolproxy_mode" == "5" ] && echo_date 选择【全端口模式】
-		[ "$koolproxy_video_rules" == "1" -a "koolproxy_oline_rules" == "0" -a "$koolproxy_easylist_rules" == "0" -a "$koolproxy_abx_rules" == "0" -a "$koolproxy_fanboy_rules" == "0" ] && echo_date 选择【视频模式】
+		[ "$koolproxy_encryption_rules" == "1" -a "koolproxy_oline_rules" == "0" -a "$koolproxy_easylist_rules" == "0" -a "$koolproxy_abx_rules" == "0" -a "$koolproxy_fanboy_rules" == "0" ] && echo_date 选择【视频模式】
 	else
 		[ "$koolproxy_base_mode" == "0" ] && echo_date 选择【不过滤】	
 		[ "$koolproxy_base_mode" == "1" ] && echo_date 选择【全局模式】
 		[ "$koolproxy_base_mode" == "2" ] && echo_date 选择【黑名单模式】
-		[ "$koolproxy_video_rules" == "1" -a "koolproxy_oline_rules" == "0" -a "$koolproxy_easylist_rules" == "0" -a "$koolproxy_abx_rules" == "0" -a "$koolproxy_fanboy_rules" == "0" ] && echo_date 选择【视频模式】
+		[ "$koolproxy_encryption_rules" == "1" -a "koolproxy_oline_rules" == "0" -a "$koolproxy_easylist_rules" == "0" -a "$koolproxy_abx_rules" == "0" -a "$koolproxy_fanboy_rules" == "0" ] && echo_date 选择【视频模式】
 	fi
 	cd $KP_DIR && koolproxy -d --ttl 188 --ttlport 3001 --ipv6
 }

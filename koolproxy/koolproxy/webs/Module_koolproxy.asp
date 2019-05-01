@@ -377,7 +377,7 @@ No part of this file may be used without permission.
 //			var R2 = document.getElementById('_koolproxy_easylist_rules').checked==false;
 //			var R3 = document.getElementById('_koolproxy_abx_rules').checked==false;
 //			var R4 = document.getElementById('_koolproxy_fanboy_rules').checked==false;
-			var R5 = document.getElementById('_koolproxy_video_rules').checked==false;
+			var R5 = document.getElementById('_koolproxy_encryption_rules').checked==false;
 
 			if (KP){
 				
@@ -399,7 +399,7 @@ No part of this file may be used without permission.
 //			dbus.koolproxy_reboot_hour = E('_koolproxy_reboot_hour').value;
 //			dbus.koolproxy_reboot_inter_hour = E('_koolproxy_reboot_inter_hour').value;
 			dbus.koolproxy_oline_rules = E("_koolproxy_oline_rules").checked ? "1" : "0";
-			dbus.koolproxy_video_rules = E("_koolproxy_video_rules").checked ? "1" : "0";
+			dbus.koolproxy_encryption_rules = E("_koolproxy_encryption_rules").checked ? "1" : "0";
 //			dbus.koolproxy_easylist_rules = E("_koolproxy_easylist_rules").checked ? "1" : "0";
 //			dbus.koolproxy_abx_rules = E("_koolproxy_abx_rules").checked ? "1" : "0";
 //			dbus.koolproxy_fanboy_rules = E("_koolproxy_fanboy_rules").checked ? "1" : "0";
@@ -614,7 +614,7 @@ No part of this file may be used without permission.
 //						{ name: 'koolproxy_reboot_inter_hour', type: 'select', options: option_reboot_inter, value: dbus.koolproxy_reboot_inter_hour || "", suffix: '<lable id="koolproxy_reboot_inter_hour_suf">重启</lable>', prefix: '<span id="koolproxy_reboot_inter_hour_pre" class="help-block"><lable>每隔</lable></span>' }
 //					] },
 					{ title: '证书下载', suffix: ' <button id="_download_cert" onclick="download_cert();" class="btn btn-danger">证书下载 <i class="icon-download"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="https_KP();" class="btn btn-success">HTTPS过滤教程 <i class="icon-hammer"></i></button>' },
-					{ title: '反馈查询', suffix: ' <button id="_issues_KP" onclick="issues_KP();" class="btn btn-primary">广告反馈 <i class="icon-tools"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="query_KP();" class="btn btn-success">结果查询 <i class="icon-search"></i></button>' },
+					{ title: '反馈查询', suffix: ' <button id="_issues_KP" onclick="issues_KP();" class="btn btn-primary">问题反馈 <i class="icon-tools"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="query_KP();" class="btn btn-success">结果查询 <i class="icon-search"></i></button>' },
 					{ title: 'KoolProxy交流', suffix: ' <button id="_join_QQ" onclick="join_QQ();" class="btn">加入QQ群 <i class="icon-plus"></i></button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="join_KP();" class="btn btn-hello">访问官网 <i class="icon-globe"></i></button>' }
 //					{ title: '广告赞助', suffix: ' <button onclick="Ad_Contribution();" class="btn btn-primary">养我啊 <i class="icon-check"></i></button>' }
 				]);
@@ -643,7 +643,7 @@ No part of this file may be used without permission.
 			<br><hr>
 			<h4>使用手册</h4>
 			<div class="section" id="sesdiv_notes2">
-				<li>过滤https站点广告需要为相应设备安装证书，并启用带HTTPS过滤的模式！</li>
+				<li>过滤https站点需要为相应设备安装证书，并启用带HTTPS过滤的模式！</li>
 				<li>【全端口模式】是包括443和80端口以内的全部端口进行过滤，如果被过滤的设备开启这个，也需要安装证书！</li>
 				<li>需要自定义列表内没有的主机时，把【主机别名】留空，填写其它的即可！</li>
 				<li>访问控制面板中【ip地址】和【mac地址】至少一个不能为空！只有ip时匹配ip，只有mac时匹配mac，两个都有一起匹配！</li>
@@ -692,7 +692,7 @@ No part of this file may be used without permission.
 						{ name: 'koolproxy_oline_rules',type:'checkbox',value: dbus.koolproxy_oline_rules == '1', suffix: '<lable id="_kp_oline_rules">绿坝规则</lable>&nbsp;&nbsp;' }
 					]},
 					{ title: '第三方规则订阅', multi: [
-						{ name: 'koolproxy_video_rules',type:'checkbox',value: dbus.koolproxy_video_rules == '1', suffix: '<lable id="_kp_video_rules">视频规则</lable>&nbsp;&nbsp;' }					
+						{ name: 'koolproxy_encryption_rules',type:'checkbox',value: dbus.koolproxy_encryption_rules == '1', suffix: '<lable id="_kp_encryption_rules">加密规则</lable>&nbsp;&nbsp;' }					
 //						{ name: 'koolproxy_easylist_rules',type:'checkbox',value: dbus.koolproxy_easylist_rules == '1', suffix: '<lable id="_kp_easylist">ABP规则</lable>&nbsp;&nbsp;' },
 //						{ name: 'koolproxy_abx_rules',type:'checkbox',value: dbus.koolproxy_abx_rules == '1', suffix: '<lable id="_kp_abx">乘风规则</lable>&nbsp;&nbsp;' },
 //						{ name: 'koolproxy_fanboy_rules',type:'checkbox',value: dbus.koolproxy_fanboy_rules == '1', suffix: '<lable id="_kp_fanboy">Fanboy规则</lable>&nbsp;&nbsp;' }
