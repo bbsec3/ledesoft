@@ -20,6 +20,7 @@ chmod +x $KSROOT/scripts/uninstall_v2ray.sh
 chmod +x $KSROOT/bin/v2ray
 chmod +x $KSROOT/bin/v2ctl
 
+
 if [ -n "$v2ray_basic_config" ]; then
 	dbus set v2ray_server_tag_1="节点1"
 	dbus set v2ray_server_config_1="$v2ray_basic_config"
@@ -45,3 +46,6 @@ rm -rf $KSROOT/init.d/S98v2ray.sh
 rm -rf /tmp/v2ray >/dev/null 2>&1
 
 [ "$v2ray_basic_enable" == "1" ] && $KSROOT/scripts/v2ray_config.sh start >/dev/null 2>&1
+
+sleep 1
+exit 0
